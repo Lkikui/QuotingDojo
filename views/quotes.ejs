@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrapper">
+
+        <h2>Here are the awesome quotes!</h2>
+
+        <% if (typeof(errors) == 'undefined') { %>
+            <% for (var quote in quotes) { %>
+                <p class="quote"><%= quotes[quote].quote %></p>
+                <p class="name_timestamp">- <%= quotes[quote].name %> at <%= quotes[quote].createdAt %></p>
+            <% } %>
+        <% } %>
+    </div>
+    <button><a href="/"> Add quote</a></button>
+</body>
+</html>
